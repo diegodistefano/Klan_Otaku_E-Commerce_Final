@@ -3,7 +3,7 @@
 
 <head>
   <% include partials/header %>
-  <title>New Book</title>
+  <title>New Product</title>
 </head>
 
 <body>
@@ -13,28 +13,27 @@
     <form method="POST" target="/new-entry" class="card card-body">
 
       <div class="form-group">
-        <label for="title">Title</label>
-        <input name="title" type="text" class="form-control" placeholder="Entry a New Title" autofocus required>
+        <label for="title">PRODUCTO</label>
+        <input name="productName" type="text" class="form-control" placeholder="INGRESE UN NUEVO PRODUCTO" autofocus required>
       </div>
 
       <div class="form-group">
-        <label for="title">Author</label>
-        <input name="author" type="text" class="form-control" placeholder="Author" autofocus required>
+        <label for="title">PRECIO</label>
+        <input name="price" type="text" class="form-control" placeholder="INGRESE UN PRECIO (SIN SIMBOLOS)" autofocus required>
       </div>
       
       <div class="form-group">
-        <label for="image">Image</label>
-        <input type="url" name="image" class="form-control" placeholder="http://website.com" required>
+        <label for="image">IMAGEN</label>
+        <input type="url" name="img" class="form-control" placeholder="http://website.com" required>
       </div>
 
       <div class="form-group">
-        <label for="description">Description</label>
-        <textarea class="form-control" name="description" rows="2" required>
-        </textarea>
+        <label for="description">CANTIDAD</label>
+        <input name="quanty" type="text" class="form-control" placeholder="CANTIDAD DISPONIBLE" autofocus required>
       </div>
 
       <div class="form-group">
-        <input type="submit" value="Post Entry" class="btn btn-primary">
+        <input type="submit" value="INGRESAR" class="btn btn-primary">
       </div>
     </form>
 

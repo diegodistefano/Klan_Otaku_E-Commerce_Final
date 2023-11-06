@@ -3,7 +3,7 @@
 
 <head>
   <% include partials/header %>
-  <title>Document</title>
+  <title>Klan Otaku Stock</title>
 </head>
 
 <body>
@@ -13,21 +13,24 @@
   <div class="container p-4">
     <div class="row">
 
-    <%if (books.length > 0) {%>
+    <%if (stock.length > 0) {%>
 
-    <% books.forEach(function(book) { %>
+    <% stock.forEach(function(prod) { %>
     <div class="col-md-4">
       <div class="card">
-        <div class="card-header bg-primary text-white">
-          <%= book.title %>
+        <div class="card-header bg-primary text-white"><p>PRODUCTO: </p>
+          <%= prod.productName %>
         </div>
-        <img class="card-img-top" src="<%= book.image %>">
-        <div class="card card-body">
-          <%= book.description %>
+        <div class="card card-body"><p>PRECIO: </p>
+          <%= prod.price %>
+        </div>
+        <img class="card-img-top" src="<%= prod.img %>">
+        <div class="card card-body"><p>CANTIDAD: </p>
+          <%= prod.quanty %>
         </div>
         <div class="card-footer">
-          <a href="/delete/<%= book.id %>" class="btn btn-danger btn-block">
-            Delete
+          <a href="/delete/<%= prod.id %>" class="btn btn-danger btn-block">
+            Eliminar
           </a>
         </div>
       </div>
@@ -36,7 +39,7 @@
 
     <%} else {%>
     <div class="card card-body text-center">
-      <p>No Books yet. <a href="/new-entry">Add A New One</a></p>
+      <p>Sin productos aun. <a href="/new-entry">Agregar nuevo producto</a></p>
     </div>
     <%}%>
     </div>

@@ -3,50 +3,52 @@ const router = express.Router();
 const fs = require('fs');
 const uuidv4 = require('uuid/v4');
 
-const json_books = fs.readFileSync('src/books.json', 'utf-8');
-let books = JSON.parse(json_books);
+const json_stock = fs.readFileSync('src/stock.json', 'utf-8');
+let stock = JSON.parse(json_stock);
 
 router.get('/', (req, res) => {
-  res.render('index', { books });
+  res.render('index', { stock });
 });
 
 router.get('/new-entry', (req, res) => {
   res.render('new-entry');
 });
 
+
+//.................COMIENZA LA FUNCION DE INGRESO
 router.post('/new-entry', (req, res) => {
 
-  const { title, author, image, description } = req.body;
+  const { productName, price, img, quanty } = req.body;
 
-  if (!title || !author || !image || !description) {
-    res.status(400).send("Entries must have a title and body");
+  if (!productName || !price || !img || !quanty) {
+    res.status(400).send("Entries must have a producto and body");
     return;
   }
 
-  var newBook = {
+  var newProduct = {
     id: uuidv4(),
-    title,
-    author,
-    image,
-    description
+    productName,
+    price,
+    img,
+    quanty
   };
 
-  // add a new book to the array
-  books.push(newBook);
+//.................AGREGA UN NUEVO PRODUCTO AL ARRAY
+  stock.push(newProduct);
 
-  // saving the array in a file
-  const json_books = JSON.stringify(books);
-  fs.writeFileSync('src/books.json', json_books, 'utf-8');
+//.................GUARGA EL ARRAY EN UN ARCHIVO
+  const json_stock = JSON.stringify(stock);
+  fs.writeFileSync('src/stock.json', json_stock, 'utf-8');
 
   res.redirect('/');
 });
-
+//.................ELIMINA LOS DATOS
 router.get('/delete/:id', (req, res) => {
-  books = books.filter(book => book.id != req.params.id);
+  stock = stock.filter(prod => prod.id != req.params.id);
 
-  // saving data
-  const json_books = JSON.stringify(books);
-  fs.writeFileSync('src/books.json', json_books, 'utf-8');
+//.................GUARDA LOS DATOS
+  const json_stock = JSON.stringify(stock);
+  fs.writeFileSync('src/stock.json', json_stock, 'utf-8');
 
   res.redirect('/')
 });
