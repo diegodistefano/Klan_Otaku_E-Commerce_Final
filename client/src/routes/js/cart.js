@@ -28,7 +28,7 @@ const displayCart = () => {
   modalHeader.append(modalTitle);
 
   modalContainer.append(modalHeader);
-
+  
   //Modal body
   if (cart.length > 0) {
     cart.forEach((product) => {

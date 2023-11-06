@@ -10,15 +10,15 @@
 
   <%include partials/navigation%>
 
-  <div class="container p-4">
+  <div class="container p-2">
     <div class="row">
 
     <%if (stock.length > 0) {%>
 
     <% stock.forEach(function(prod) { %>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="card">
-        <div class="card-header bg-primary text-white"><p>PRODUCTO: </p>
+        <div class="card-header bg-danger text-white"><p>PRODUCTO: </p>
           <%= prod.productName %>
         </div>
         <div class="card card-body"><p>PRECIO: </p>

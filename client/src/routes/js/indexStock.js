@@ -3,11 +3,12 @@ const router = express.Router();
 const fs = require('fs');
 const uuidv4 = require('uuid/v4');
 
+
 const json_stock = fs.readFileSync('src/stock.json', 'utf-8');
 let stock = JSON.parse(json_stock);
 
 router.get('/', (req, res) => {
-  res.render('index', { stock });
+  res.render('./indexStock', { stock });
 });
 
 router.get('/new-entry', (req, res) => {
@@ -52,5 +53,6 @@ router.get('/delete/:id', (req, res) => {
 
   res.redirect('/')
 });
+
 
 module.exports = router;

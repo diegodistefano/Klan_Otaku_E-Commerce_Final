@@ -1,7 +1,7 @@
 const express = require('express');
 const path    = require('path');
 const logger  = require('morgan');
-
+const fs = require("fs");
 const app = express();
 
 // Settings
@@ -14,9 +14,9 @@ app.use(logger('dev'));
 app.use(express.urlencoded({extended: false}));
 
 // Routes
-app.use(require('./routes/index'));
+app.use(require('./routes/js/indexStock'));
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client')));
 
 // 404 handler
 app.use((req, res, next) => {
