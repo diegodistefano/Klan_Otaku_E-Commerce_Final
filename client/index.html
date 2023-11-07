@@ -9,8 +9,6 @@
     <script src="https://kit.fontawesome.com/ff6581bb19.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet">
-        
-    
     
     <title>Klan Otaku - Shop Home</title>
 </head>
@@ -20,25 +18,14 @@
         <div class="imagen-header">
             <img src = "./Logo_KO.png" alt = "logo"><h1>Klan Otaku</h1>
         </div>
-        
-        <!-- <div class="barra">
-            <form action="/home.html" method="POST">
-                <input type="text" id="buscar" name="buscar" placeholder="Buscar productos, marcas">
-            </form>
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
-        
-        <div class="compra-cuotas">
-            <i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas y sin tarjeta de crédito A FULL
-        </div> -->
-        
         <div class="burger">
             <button>
                 <a href="#"><i class="fas fa-bars"></i></a>
             </button>
         </div>
+
+        <!--...................NAVBAR................-->
         <div class="navbar">
-            <!-- Primera lista -->
             <ul class="lista">
                 <li><a href=#>Remeras</a></li>
                 <li><a href=#>Buzos</a></li>
@@ -49,17 +36,12 @@
                 <li><a href=#>Pines</a></li>
                 <li><a href=#>Figuras</a></li>
             </ul>
-            <!-- Segunda lista -->
-            <!-- <ul  class="lista2"> 
-                <li><a href=#>Creá tu cuenta <i class="fa-regular fa-id-card"></i></a></li>
-                <li><a href=#>Ingresá <i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
-                <li><div class="mis-compras" id="mis-compras"><a>Mis compras <i class="fa-solid fa-basket-shopping"></i></a></div></li>
-            </ul> -->
         </div>
         
     </header>
     
     <main>
+        <!--...................SLIDER DE IMAGENES................-->
         <div class="slider">
             <div class="slide-track">
                 <div class="slide">
@@ -85,6 +67,7 @@
             </div>
         </div>
         
+        <!--...................PRODUCTOS................-->
         <section class="seccion-visita">
             <h2>NUESTROS PRODUCTOS</h2>
             
@@ -94,27 +77,7 @@
             </div>
             
         </section>
-        
-        <!-- 
-            <section class="seccion-oferta">                
-                <h2>Ofertas</h2>
-                <div class="listadoOfertas">
-                    <div class="producto">
-                        <img width=100% src= "/images/img-figura-kakashi.webp" alt="kakashi">
-                        <div class="detalles">
-                            
-                            <i class="fa-solid fa-truck camionenvio"></i>
-                            <nav class="renglon">    
-                                <p class="precio">$26.770</p>
-                                <p class="descuentos">40% OFF</p>
-                            </nav> 
-                            <p class="descripcion"><strong>Figura Kakashi</strong></p>
-                        </div>       
-                    </div>
-                </div>
-            </section>
-        -->
-        
+
         <!-- cart-btn -->
         <div class="cart-btn" id="cart-btn">
             <i class="fa-solid fa-cart-shopping cart-btn"></i>
@@ -126,8 +89,6 @@
         <!--modal-->
         <div class="modal-overlay" id="modal-overlay"></div>
         <div class="modal-container" id="modal-container"></div>
-        <div class="stockDeJson" id="stockDeJson"></div>
-
         
     </main>
     
@@ -156,10 +117,8 @@
     </div>
     
 </footer>
-<!-- <script type="module" src="./stock2.json"></script> -->
-<script src="./src/routes/js/index.js" type="module"></script>
-<script src="./src/routes/js/cart.js" type="module"></script>></script>
-<script src="./src/routes/js/productos.js" type="module"></script>
+<script type="module" src="src/routes/js/indexCart.js"></script>
+<script type="module" src="src/routes/js/cart.js"></script>></script>
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 </html>
 

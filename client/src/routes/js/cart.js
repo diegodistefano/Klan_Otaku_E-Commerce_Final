@@ -1,3 +1,5 @@
+import { cart } from './indexCart.js'; // Importa la variable cart desde indexCart.js
+
 const modalContainer = document.getElementById("modal-container");
 const modalOverlay = document.getElementById("modal-overlay");
 
