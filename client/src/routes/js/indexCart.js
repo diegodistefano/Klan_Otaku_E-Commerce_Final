@@ -30,7 +30,7 @@ fetch("./src/stock.json")
           cart.map((prod) => {
             if (prod.id === product.id) {
               prod.quanty++;
-              displayCartCounter();
+              // displayCartCounter();
             }
           });
         } else {
@@ -41,7 +41,7 @@ fetch("./src/stock.json")
             quanty: product.quanty,
             img: product.img,
           });
-          displayCartCounter();
+          // displayCartCounter();
           saveLocal();
         }
       });
@@ -52,6 +52,7 @@ fetch("./src/stock.json")
 //LOCAL STORAGE
 
 //set item
-const saveLocal = () => {
+export const saveLocal = () => {
   localStorage.setItem("cart", JSON.stringify(cart)); //localstorage solo recibe Strings, y el cart es un array, por eso necesita stringify
 };
+
