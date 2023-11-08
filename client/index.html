@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, inicial scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./Logo_KO.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/Logo_KO.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/ff6581bb19.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet">
-    
+
     <title>Klan Otaku - Shop Home</title>
 </head>
 
 <body>
-    <header>    
+    <header>
         <div class="imagen-header">
-            <img src = "./Logo_KO.png" alt = "logo"><h1>Klan Otaku</h1>
-        </div>
-        <div class="burger">
-            <button>
-                <a href="#"><i class="fas fa-bars"></i></a>
-            </button>
+            <img src="./img/Logo_KO.png" alt="logo">
+            <h1>Klan Otaku</h1>
         </div>
 
         <!--...................NAVBAR................-->
+        <!-- 
+        <button>
+            </div>
+            <div class="burger">
+            <a href="#"><i class="fas fa-bars"></i></a>
+        </button>
         <div class="navbar">
             <ul class="lista">
                 <li><a href=#>Remeras</a></li>
@@ -36,10 +39,11 @@
                 <li><a href=#>Pines</a></li>
                 <li><a href=#>Figuras</a></li>
             </ul>
-        </div>
-        
+        </div> 
+    -->
+
     </header>
-    
+
     <main>
         <!--...................SLIDER DE IMAGENES................-->
         <div class="slider">
@@ -66,59 +70,72 @@
                 </div>
             </div>
         </div>
-        
+
         <!--...................PRODUCTOS................-->
         <section class="seccion-visita">
             <h2>NUESTROS PRODUCTOS</h2>
-            
+
             <!--shop content-->
             <div class="card-products-container">
                 <div class="card-products" id="shopContent"></div>
             </div>
-            
+
         </section>
 
         <!-- cart-btn -->
         <div class="cart-btn" id="cart-btn">
             <i class="fa-solid fa-cart-shopping cart-btn"></i>
         </div>
-        
+
         <!--cart counter-->
-            <span class="cart-counter" id="cart-counter">0</span>
-        
+        <!-- <span class="cart-counter" id="cart-counter">0</span> -->
+
         <!--modal-->
         <div class="modal-overlay" id="modal-overlay"></div>
         <div class="modal-container" id="modal-container"></div>
-        
+
     </main>
-    
-    
+    <div class="final">
+
+    </div>
 </body>
 
 <footer>
-    <div class="footer-box"></div>
-    <div class="items-footer">
-        <i class="fa-solid fa-credit-card"></i>
-        <h4>Pagá con tarjeta o en efectivo</h4>
-        
-        <p>Con MercadoPago, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!
-            </p>
-
-            <i class="fa-solid fa-gift"></i>
-            <h4>Envío gratis desde $ 10.000</h4>
-            <p>Solo por estar registrad@ en Klan Otaku tenés envíos gratis en miles de productos. Es un beneficio por ser parte de Nuestro Klan.
-            </p>
-            <i class="fa-solid fa-user-shield"></i> 
-            <h4>Seguridad, de principio a fin</h4>
-            <p>¿No te gusta? ¡Devolvelo! En Klan Otaku, no hay nada que no puedas hacer, porque estás siempre protegid@.
-            </p>
-        </br>
-        <p>Copyright © 2023 Klan Otaku & Diego Di Stefano</p>
+    <div class="footer-img foot">
+        <img src="./img/Logo_KO.png" alt="logo">
+        <p>Copyright © 2023 <br>
+            Diego Di Stefano<br>
+            & Klan Otaku</p>
     </div>
-    
+    <div class="footer-pagos foot">
+        <h4>Pagá con tarjeta o en efectivo</h4>
+        <i class="fa-solid fa-credit-card"></i>
+        <p>Con MercadoPago, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!
+        </p>
+    </div>
+    <div class="footer-envios foot">
+        <h4>Envío gratis desde $ 10.000</h4>
+        <i class="fa-solid fa-gift"></i>
+        <p>Solo por estar registrad@ en Klan Otaku tenés envíos gratis en miles de productos. Es un beneficio por ser
+            parte de Nuestro Klan.
+        </p>
+    </div>
+    <div class="footer-seguridad foot">
+        <h4>Seguridad, de principio a fin</h4>
+        <i class="fa-solid fa-user-shield"></i>
+        <p>¿No te gusta? ¡Devolvelo! En Klan Otaku, no hay nada que no puedas hacer, porque estás siempre protegid@.
+        </p>
+    </div>
+    <div class="footer-contacto foot">
+        <h4>CONTACTO</h4>
+        <i class="fa-solid fa-user-shield"></i>
+        <p>¿No te gusta? ¡Devolvelo! En Klan Otaku, no hay nada que no puedas hacer, porque estás siempre protegid@.
+        </p>
+    </div>
 </footer>
-<script type="module" src="src/routes/js/indexCart.js"></script>
-<script type="module" src="src/routes/js/cart.js"></script>></script>
-<script src="https://sdk.mercadopago.com/js/v2"></script>
-</html>
 
+<script type="module" src="src/routes/js/indexCart.js"></script>
+<script type="module" src="src/routes/js/cart.js"></script>
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+
+</html>

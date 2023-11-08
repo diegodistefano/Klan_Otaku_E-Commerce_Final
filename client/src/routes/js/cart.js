@@ -66,7 +66,7 @@ const displayCart = () => {
       increse.addEventListener("click", () => {
         product.quanty++;
         displayCart();
-        displayCartCounter();
+        // displayCartCounter();
       });
 
       // ELIMINAR PRODUCTO
@@ -76,7 +76,7 @@ const displayCart = () => {
         cart.splice(index, 1);
         saveLocal();
         displayCart();
-        displayCartCounter();
+        // displayCartCounter();
       });
     });
     //Modal footer
@@ -86,7 +86,7 @@ const displayCart = () => {
     modalFooter.className = "modal-footer";
     modalFooter.innerHTML = `
     <div class="total-price">Total: $ ${total}.-</div>
-    <div id="button-checkout"><button class="btn-primary" id= "checkout-btn">COMPRAR</button></div>
+    <div id="button-checkout"><button class="btn-primary" id= "checkout-btn">Finalizar la compra</button></div>
     `;
     modalContainer.append(modalFooter);
     //mp;
@@ -147,15 +147,15 @@ const displayCart = () => {
 };
 cartBtn.addEventListener("click", displayCart);
 
-const displayCartCounter = () => {
-  const cartLength = cart.reduce((acc, el) => acc + el.quanty, 0);
-  if (cartLength > 0) {
-    cartCounter.style.display = "block";
-    localStorage.setItem("cartLength", JSON.stringify(cartLength))
-    cartCounter.innerText = JSON.parse(localStorage.getItem("cartLength"));
-  } else {
-    cartCounter.style.display = "none";
-  }
-};
+// const displayCartCounter = () => {
+//   const cartLength = cart.reduce((acc, el) => acc + el.quanty, 0);
+//   if (cartLength > 0) {
+//     cartCounter.style.display = "block";
+//     localStorage.setItem("cartLength", JSON.stringify(cartLength))
+//     cartCounter.innerText = JSON.parse(localStorage.getItem("cartLength"));
+//   } else {
+//     cartCounter.style.display = "none";
+//   }
+// };
 
-displayCartCounter();
+// displayCartCounter();
