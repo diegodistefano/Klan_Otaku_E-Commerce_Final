@@ -71,7 +71,7 @@ header {
     color: #ebebeb;
 }
 
-ul {
+.navbar ul {
     width: 100%;
     list-style: none;
     margin: 10px 0;
@@ -286,16 +286,15 @@ main
 footer{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     text-align: center;
     font-size: 14px;  
-    /* background-color: #CD0002;
-    color: #ebebeb; */
-    /* padding: 2rem;
-    margin-top: 4rem; */
 }
 .footer-img img{
     width: 15vw;
+}
+
+.copy-foot{
+    font-size: 15px;
 }
 footer h4{
     font-weight: 600;
@@ -316,7 +315,6 @@ footer h4{
 .container-foot-hijo{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     text-align: center;
     font-size: 14px;  
 }
@@ -324,12 +322,10 @@ footer h4{
     width: 85vw;
 }
 
-
-
 .footer-datos{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
     font-size: 14px;  
 }
@@ -348,16 +344,16 @@ footer h4{
     font-size: 2em;
 }
 
-.copy-foot{
-    margin: 2rem 0;
-    font-size: 20px;
-}
-
 .contac li{
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 17px;
+    padding-bottom: 2px;
+}
+
+.contac a{
+    color: black;
 }
 
 .contac ul{
@@ -366,8 +362,8 @@ footer h4{
 }
 
 .contac img{
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
 }
 
 
@@ -548,7 +544,12 @@ footer h4{
 /*  ----------------------   MEDIA QUERIES    -------------------------  */
 /*  ----------------------   MEDIA QUERIES    -------------------------  */
 
-/* mobile */
+
+
+
+
+
+/*  ----------------------   MOBILE   -------------------------  */
 @media only screen and (max-width: 500px) {
     .modal-container {
         margin: 0;
@@ -569,22 +570,113 @@ footer h4{
         align-items: start;
         width: 10px;
     }
+/*  ----------------------   PRODUCTOS (CARDS)   -------------------------  */
 
-    div.navbar {
+
+    .card-products-container {
+        margin: 10px;
+    }
+
+    .card-products {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .card img {
+        margin-top: 2px;
+        width: 100%;
+        height: auto;
+    }
+
+    .card{
+        box-shadow: 0px 0px 10px rgb(25, 25, 25);
+        /* flex-grow: 50%; */
+        padding: 0.5rem;
+        margin: 0.3rem;
+        border-radius: 1rem;
+        width: 30vw;
+    }
+
+    .card h3{
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    .producto 
+    {
+        margin: 15px;
+        width: 95%;
+    }
+
+
+    /*  ----------------------   FOOTER    -------------------------  */
+
+    .footer-img{
+        display: none;
+    }
+
+    .copy-foot-abajo{
+        gap: 1px;
+        margin: 1px;
+    }
+    footer h4{
+        font-size: 11px;
+    }
+    .container-foot-hijo{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 150px;
-        border-radius: 0 0 1rem 1rem;
+        text-align: center;
     }
-    ul {
+    .container-foot-hijo img{
+        width: 100vw;
+    }
+    .footer-datos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        font-size: 9px;  
+    }
+    .fa-user-shield, .fa-gift, .fa-credit-card, .fa-phone 
+    {
+        color: #CD0002;
+        font-size: 1.5em;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .contac li{
+        display: flex;
+        align-items: center;
+        font-size: 9px;
+        padding-bottom: 1px;
+    }
+
+    .contac a{
+        color: black;
+    }
+
+    .contac ul{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        gap: 1rem;
+        padding: 0.3rem;
+        gap: 0.3rem;
     }
+
+    .contac img{
+        height: 25px;
+        width: 25px;
+    }
+
+
+    .foot {
+        height: 24vh;
+        width: 18vw;
+    }
+
 }
 
 
@@ -597,6 +689,9 @@ footer h4{
     .burger{
         display: none;
     }  
+    .copy-foot-abajo{
+        display: none;
+    }
 }
 
 /* desktop */
@@ -628,4 +723,7 @@ footer h4{
     .burger{
         display: none;
     }  
+    .copy-foot-abajo{
+        display: none;
+    }
 }

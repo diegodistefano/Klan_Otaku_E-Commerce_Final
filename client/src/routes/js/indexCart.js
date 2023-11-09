@@ -10,8 +10,8 @@ fetch("./src/stock.json")
       const content = document.createElement("div");
       content.className = "card";
       content.innerHTML = `
-          <img src="${product.img}"></br>
-          <h3>${product.productName}</h3></br>
+          <img src="${product.img}">
+          <h3>${product.productName}</h3>
           <h3>$${product.price}.</h3>
           `;
       shopContent.append(content);
