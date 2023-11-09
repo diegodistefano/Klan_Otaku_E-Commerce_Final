@@ -1,7 +1,8 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -233,7 +234,7 @@ main
 /*  ----------------------   BOTON CARRITO    -------------------------  */
 .cart-btn {
     position: fixed;
-    top: 70vh;
+    top: 50vh;
     right:40px;
     padding: 10px;
     transition: transform 0.2s ease-in-out;
@@ -262,7 +263,7 @@ main
 .cart-counter {
    /* display: none; */
     position: fixed;
-    top: 68vh;
+    top: 48vh;
     right: 27px;
     color: #fff;
     text-align: center;
@@ -284,7 +285,8 @@ main
 
 footer{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     font-size: 14px;  
     /* background-color: #CD0002;
@@ -293,15 +295,46 @@ footer{
     margin-top: 4rem; */
 }
 .footer-img img{
-    height: 15vh;
+    width: 15vw;
 }
-
 footer h4{
     font-weight: 600;
     font-size: 16px;
 }
+.container-foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 14px;  
+    /* background-color: #CD0002;
+    color: #ebebeb; */
+    /* padding: 2rem;
+    margin-top: 4rem; */
+}
 
-.fa-user-shield, .fa-gift, .fa-credit-card 
+.container-foot-hijo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 14px;  
+}
+.container-foot-hijo img{
+    width: 85vw;
+}
+
+
+
+.footer-datos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 14px;  
+}
+
+.fa-user-shield, .fa-gift, .fa-credit-card, .fa-phone 
 {
     color: #CD0002;
     font-size: 2em;
@@ -315,11 +348,32 @@ footer h4{
     font-size: 2em;
 }
 
+.copy-foot{
+    margin: 2rem 0;
+    font-size: 20px;
+}
 
-.foot
-{
-    height: 10rem;
-    width: 10rem;
+.contac li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 17px;
+}
+
+.contac ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.contac img{
+    height: 30px;
+    width: 30px;
+}
+
+
+.foot {
+    height: 20vh;
+    width: 15vw;
 }
 
 
