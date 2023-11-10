@@ -1,0 +1,761 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+
+/*  ----------------------   HEADER   -------------------------  */
+/*  ----------------------   HEADER   -------------------------  */
+/*  ----------------------   HEADER   -------------------------  */
+/*  ----------------------   HEADER   -------------------------  */
+
+h1{
+    display: none;
+}
+
+header {
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.renglon {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.imagen-header img{
+    height: 30vh;
+}
+
+.barra{
+    display: flex;
+    gap: 1rem;
+}
+
+.barra input{
+    border-radius: 10px;
+    height: 5vh;
+    border: 1px solid black;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+
+/*  ----------------------   CARRUSEL   -------------------------  */
+
+.carrusel {
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.carrusel-items {
+display: flex;
+overflow-x: hidden;
+overflow-y: hidden;
+/* padding: 30px 0px; */
+}
+
+.carrusel-item {
+min-width: 300px;
+max-width: 300px;
+height: 200px;
+outline: 2px solid black;
+}
+
+.carrusel-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+  
+/*  ----------------------   NAVBAR   -------------------------  */
+
+.navbar a:hover{
+    background-color: black;
+    border-radius: 50% 20% / 10% 40%;
+    padding: 0.5rem;
+    /* color: #CD0002; */
+    font-weight: bolder;
+
+}
+
+.navbar {
+    background-color: #CD0002;
+    width: 100%;
+    font-size: 1.2rem;
+    color: #ebebeb;
+}
+
+.navbar ul {
+    width: 100%;
+    list-style: none;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ebebeb;
+}
+
+.burger {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fas {
+    color: #fff;
+    font-size: 20px;
+    background-color: #CD0002;
+    padding: 10px 12px;
+    margin: -10px;
+    border-radius: 10%;
+    text-align: center;
+}
+
+/*  ----------------------   SLIDE DE IMAGENES    -------------------------  */
+.slider {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+}
+.slider .slide {
+    width: 200px;
+}
+/* .slider .slide img {
+    width: 100%;
+} */
+.slide h2{
+    size:24px;
+    margin: 15px 2px;
+    text-align: center;
+}
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
+    }
+}
+
+
+
+
+/*  ----------------------   PRODUCTOS (CARDS)   -------------------------  */
+/*  ----------------------   PRODUCTOS (CARDS)   -------------------------  */
+/*  ----------------------   PRODUCTOS (CARDS)   -------------------------  */
+/*  ----------------------   PRODUCTOS (CARDS)   -------------------------  */
+
+
+
+main 
+{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+.descripcion{
+    size: 16px;
+} 
+
+.descuentos{
+    size: 16px;
+    width:40%;
+    color: #CD0002;
+}
+
+.precio {
+    size: 18px;
+    width:50%;
+}
+
+.card-products-container {
+    margin: 5vh auto;
+}
+
+.card-products {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card-products img {
+    margin-top: 40px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card{
+    box-shadow: 0px 0px 10px rgb(25, 25, 25);
+    flex-grow: 50%;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.card-products button {
+    border: none;
+    outline: 0;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    background-color: #CD0002;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 1rem;
+}
+
+.card-products button:hover {
+    opacity: 0.7;
+}
+
+.producto 
+{
+    margin: 15px;
+    width: 95%;
+}
+
+.detalles
+{
+    border-top: solid 1px #ebebeb;
+    border-left: 15px;
+    border-right: 15px;
+    position: relative;
+    
+}
+
+
+
+/*  ----------------------   BOTON CARRITO    -------------------------  */
+/*  ----------------------   BOTON CARRITO    -------------------------  */
+/*  ----------------------   BOTON CARRITO    -------------------------  */
+/*  ----------------------   BOTON CARRITO    -------------------------  */
+.cart-btn {
+    position: fixed;
+    top: 55vh;
+    right:25px;
+    padding: 5px;
+    transition: transform 0.2s ease-in-out;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.cart-btn:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 10rem;
+}
+
+.modal-close{
+    font-size: large;
+    font-weight: 800;
+    padding-bottom: 1rem;
+}
+
+.modal-close:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+/*  ----------------------   CONTADOR CARRITO    -------------------------  */
+.cart-counter {
+   /* display: none; */
+    position: fixed;
+    top: 48vh;
+    right: 27px;
+    color: #fff;
+    text-align: center;
+    background-color: #CD0002;
+    padding: 4px;
+    border: 1px solid #333333;
+    border-radius: 50%;
+    height: 22px;
+    width: 22px;
+    font-size: 15px;
+}
+
+
+
+/*  ----------------------   FOOTER    -------------------------  */
+/*  ----------------------   FOOTER    -------------------------  */
+/*  ----------------------   FOOTER    -------------------------  */
+/*  ----------------------   FOOTER    -------------------------  */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;  
+}
+.footer-img img{
+    width: 15vw;
+}
+
+.copy-foot{
+    font-size: 15px;
+}
+footer h4{
+    font-weight: 600;
+    font-size: 16px;
+}
+.container-foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 14px;  
+    /* background-color: #CD0002;
+    color: #ebebeb; */
+    /* padding: 2rem;
+    margin-top: 4rem; */
+}
+
+.container-foot-hijo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;  
+}
+.container-foot-hijo img{
+    width: 85vw;
+}
+
+.footer-datos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 14px;  
+}
+
+.fa-user-shield, .fa-gift, .fa-credit-card, .fa-phone 
+{
+    color: #CD0002;
+    font-size: 2em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.fa-magnifying-glass
+{
+    color: black;
+    font-size: 2em;
+}
+
+.contac li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 17px;
+    padding-bottom: 2px;
+}
+
+.contac a{
+    color: black;
+}
+
+.contac ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.contac img{
+    height: 25px;
+    width: 25px;
+}
+
+
+.foot {
+    height: 20vh;
+    width: 15vw;
+}
+
+
+
+/*  ----------------------   MODAL    -------------------------  */
+/*  ----------------------   MODAL    -------------------------  */
+/*  ----------------------   MODAL    -------------------------  */
+/*  ----------------------   MODAL    -------------------------  */
+.modal-overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.modal-container {
+    display: none;
+    background-color: #ffffff;
+    /* box-shadow: 0px 3px 6px #00000029; */
+    box-shadow: 0px 0px 10px rgb(49, 49, 49);
+    padding: 40px;
+    margin: 10px 0px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    width: 100%;
+    z-index: 1;
+    max-height: 80vh;
+    overflow-y: auto;  
+}
+.modal-container::-webkit-scrollbar{
+    display: none;
+}
+
+.modal.close {
+    float: right;
+    cursor: pointer;
+}
+.modal-title { 
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/*  ----------------------   MODAL BODY    -------------------------  */
+.modal-body {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.product-img {
+    height: 80px;
+    width: 80px;
+    margin: 0 5px;
+    align-items: start;
+}
+
+.product-info h4 {
+    margin-top: 35px;
+}
+
+.product-info {
+    width: 80px;
+    align-items: start;
+}
+ 
+.quantity {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.quantity-btn-decrese,
+.quantity-btn-increse {
+    color:  #333333;
+    cursor: pointer;
+    font-size: 16px;
+    width: 28px;
+    font-weight: bold;
+}
+
+.quantity-input {
+    color: #333333;
+    font-size: 16px;
+    padding: 10 10px;
+    text-align: center;
+    width: 50px;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100px;
+    text-align: end;
+}
+
+.delete-product {
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: end;
+}
+
+
+/*  ----------------------   MODAL FOOTER    -------------------------  */
+.modal-footer {
+    text-align: center;
+}
+
+.total-price {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: white;
+    background-color: #CD0002;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+#button-checkout .btn-primary {
+    width: 100%;
+    background-color: #009EE3;
+    border-color: #009EE3;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    outline: 0;
+    padding: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+#button-checkout {
+    z-index: 10;
+}
+
+
+
+
+
+/*  ----------------------   MEDIA QUERIES    -------------------------  */
+/*  ----------------------   MEDIA QUERIES    -------------------------  */
+/*  ----------------------   MEDIA QUERIES    -------------------------  */
+/*  ----------------------   MEDIA QUERIES    -------------------------  */
+
+
+
+
+
+
+/*  ----------------------   MOBILE   -------------------------  */
+@media only screen and (max-width: 500px) {
+    .modal-container {
+        margin: 0;
+        padding: 20px 0px;
+    }
+    .descripcion{
+        display:none;
+    }
+    .product-img{
+        display: none;
+    }
+    .price {
+        font-size: 15px;
+        width: 75px;
+        text-align: end;
+    }
+    .delete-product {
+        align-items: start;
+        width: 10px;
+    }
+    .seccion-visita h2{
+        font-size: 16px;
+    }
+/*  ----------------------   PRODUCTOS (CARDS)   -------------------------  */
+
+
+    .card-products-container {
+        margin: 10px;
+    }
+
+    .card-products {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .card img {
+        margin-top: 2px;
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .card{
+        box-shadow: 0px 0px 10px rgb(25, 25, 25);
+        /* flex-grow: 50%; */
+        padding: 0.5rem;
+        margin: 0.3rem;
+        border-radius: 1rem;
+        width: 30vw;
+    }
+
+    .card h3{
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    .cart-btn {
+        right:10px;
+    }
+
+    /*  ----------------------   FOOTER    -------------------------  */
+
+    .footer-img{
+        display: none;
+    }
+
+    .copy-foot-abajo{
+        gap: 1px;
+        margin: 1px;
+    }
+    footer h4{
+        font-size: 11px;
+    }
+    .container-foot-hijo{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .container-foot-hijo img{
+        width: 100vw;
+    }
+    .footer-datos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        font-size: 9px;  
+    }
+    .fa-user-shield, .fa-gift, .fa-credit-card, .fa-phone 
+    {
+        color: #CD0002;
+        font-size: 1.5em;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .contac li{
+        display: flex;
+        align-items: center;
+        font-size: 9px;
+        padding-bottom: 1px;
+    }
+
+    .contac a{
+        color: black;
+    }
+
+    .contac ul{
+        display: flex;
+        flex-direction: column;
+        padding: 0.3rem;
+        gap: 0.3rem;
+    }
+
+    .contac img{
+        height: 25px;
+        width: 25px;
+    }
+
+
+    .foot {
+        height: 24vh;
+        width: 18vw;
+    }
+
+}
+
+
+/* tablet */
+@media only screen and (min-width: 501px) and (max-width: 1023px) {
+    .producto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        flex-grow: 50%;
+    }
+    .burger{
+        display: none;
+    }  
+    .copy-foot-abajo{
+        display: none;
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 1024px) 
+{ 
+    .producto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        flex-grow: 25%;
+        text-align: center;
+    }
+    
+    .listaProducto{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .renglon, .producto-visita, .listadoOfertas {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .items-footer 
+    {
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 14px;  
+    }
+    .burger{
+        display: none;
+    }  
+    .copy-foot-abajo{
+        display: none;
+    }
+}

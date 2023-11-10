@@ -1,12 +1,11 @@
-import { cart } from './indexCart.js'; // Importa la variable cart desde indexCart.js
-import { saveLocal } from './indexCart.js';
-
+import { cart } from "./indexCart.js"; // Importa la variable cart desde indexCart.js
+import { saveLocal } from "./indexCart.js";
 
 const modalContainer = document.getElementById("modal-container");
 const modalOverlay = document.getElementById("modal-overlay");
 
 const cartBtn = document.getElementById("cart-btn");
-const cartCounter = document.getElementById("cart-counter");
+// const cartCounter = document.getElementById("cart-counter");
 
 const displayCart = () => {
   modalContainer.innerHTML = "";
@@ -32,7 +31,7 @@ const displayCart = () => {
   modalHeader.append(modalTitle);
 
   modalContainer.append(modalHeader);
-  
+
   //Modal body
   if (cart.length > 0) {
     cart.forEach((product) => {
@@ -51,15 +50,15 @@ const displayCart = () => {
         </div>
         <div class="price">$ ${product.price * product.quanty}.-</div>
         <div class="delete-product">❌</div>
-    </div>
-        `;
+      </div>
+      `;
       modalContainer.append(modalBody);
       const decrese = modalBody.querySelector(".quantity-btn-decrese");
       decrese.addEventListener("click", () => {
-        if (product.quanty !== 1) {
+        if (product.quanty != 1) {
           product.quanty--;
           displayCart();
-          displayCartCounter();
+          // displayCartCounter();
         }
       });
       const increse = modalBody.querySelector(".quantity-btn-increse");
@@ -90,9 +89,12 @@ const displayCart = () => {
     `;
     modalContainer.append(modalFooter);
     //mp;
-    const mercadopago = new MercadoPago("TEST-fb1b0a44-bfe1-4d95-8325-015e88c7af0b", {
-      locale: "es-AR",
-    });
+    const mercadopago = new MercadoPago(
+      "TEST-fb1b0a44-bfe1-4d95-8325-015e88c7af0b",
+      {
+        locale: "es-AR",
+      }
+    );
 
     const checkoutButton = document.getElementById("checkout-btn");
     checkoutButton.addEventListener("click", () => {
