@@ -385,6 +385,10 @@ footer h4{
 
 .contac a{
     color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .contac ul{
@@ -685,10 +689,6 @@ footer h4{
         align-items: center;
         font-size: 9px;
         padding-bottom: 1px;
-    }
-
-    .contac a{
-        color: black;
     }
 
     .contac ul{
