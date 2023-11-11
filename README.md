@@ -12,24 +12,25 @@ Este sitio web fue armado para ser utilizado en mi emprendimiento familiar, asi 
 </br>
 </br>
 # Instalación:
-```
-Paso 1. Clonar con el comando: git clone https://github.com/diegodistefano/Klan_Otaku_E-Commerce_Final.git
-Paso 2. Abrir el repositorio desde VSCode.
-Paso 3. Abrir dos terminales desde VSC. 
-Paso 4. En la primer terminal, escribir comandos en el siguiente orden:
-1. "cd server".
-2. "npm install".
-3. "nodemon start".
-Paso 5. Desde una pestaña del navegador, escribir "http://localhost:8016".
-Paso 6. En la segunda terminal, escribir comandos en el siguiente orden:
-1. "cd client".
-2. "npm install".
-3. "nodemon start".
-Paso 7. Desde otra pestaña del un navegador, escribir "http://localhost:5000".
-
-
-
-
+</br>
+</br>
+Paso 1. Clonar con el comando: git clone https://github.com/diegodistefano/Klan_Otaku_E-Commerce_Final.git</br>
+Paso 2. Abrir el repositorio desde VSCode.</br>
+Paso 3. Abrir dos terminales desde VSC. </br>
+Paso 4. En la primer terminal, escribir comandos en el siguiente orden:</br>
+1. "cd server".</br>
+2. "npm install".</br>
+3. "nodemon start".</br>
+Paso 5. Desde una pestaña del navegador, escribir "http://localhost:8016".</br>
+Paso 6. En la segunda terminal, escribir comandos en el siguiente orden:</br>
+1. "cd client".</br>
+2. "npm install".</br>
+3. "nodemon start".</br>
+Paso 7. Desde otra pestaña del un navegador, escribir "http://localhost:5000".</br>
+</br>
+</br>
+</br>
+</br>
 
 
 
